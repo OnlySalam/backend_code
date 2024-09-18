@@ -23,13 +23,13 @@ jobs:
                 echo "deployment_tag=$( git describe --always)" >> $GITHUB_OUTPUT
                 echo "image_name=backend" >> $GITHUB_OUTPUT
             
-            - name: 'Delete any running container'
-              run: |
-                sudo docker stop backend && sudo docker rm backend
+            # - name: 'Delete any running container'
+            #   run: |
+            #     sudo docker stop backend && sudo docker rm backend
                 
-            - name: "Remove any images on the system"
-              run: |
-                sudo docker rmi -f $( sudo docker images -q)
+            # - name: "Remove any images on the system"
+            #   run: |
+            #     sudo docker rmi -f $( sudo docker images -q)
                 
             - name: "Build a Docker Image"
               run: |
