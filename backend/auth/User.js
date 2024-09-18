@@ -15,7 +15,7 @@ User = (function(){
     const checkUserExistsByUsername = async (username) => {
 
     // sends the request to the backend
-        let feedback = await axios.get("http://bastion-ip/submit");
+        let feedback = await axios.get("http://process.env.BASTION_IP/submit");
 
 
 
